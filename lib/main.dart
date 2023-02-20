@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pos/Views/components/cart.dart';
+import 'package:pos/Views/components/item_category.dart';
+import 'package:pos/Views/components/item_grid.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -75,44 +77,9 @@ class Right extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         color: Theme.of(context).colorScheme.primaryContainer,
-        child: Column(children: [
-          Category(),
+        child:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          ItemCategory(),
         ]));
-  }
-}
-
-class Category extends StatelessWidget {
-  const Category({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Row(
-          children: [
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-          ],
-        ),
-        Row(
-          children: [
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-          ],
-        ),
-        Row(
-          children: [
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-            ElevatedButton(onPressed: () {}, child: Text('AAA')),
-          ],
-        ),
-      ],
-    );
   }
 }
